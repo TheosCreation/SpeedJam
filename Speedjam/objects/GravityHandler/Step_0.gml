@@ -25,6 +25,10 @@ for(var i = 0; i< array_length(ObjList);i++){
 				grid[ObjList[i].X + j][ObjList[i].Y + k].X = tempStrenght*sign(j);
                 grid[ObjList[i].X + j][ObjList[i].Y + k].Y = tempStrenght*sign(k);
              }
+			 else{
+				//ObjList[i].SpdX*=-1;
+				//ObjList[i].SpdY*=-1;
+			 }
 
 		}
 	}
