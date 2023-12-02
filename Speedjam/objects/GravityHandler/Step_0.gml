@@ -22,8 +22,8 @@ for(var i = 0; i< array_length(ObjList);i++){
             ObjList[i].Y + k >= 0)&&j!=0||k!=0)
 			{
                 tempStrenght =abs(((abs(j) + abs(k)) / 2)-tempMass);
-				grid[ObjList[i].Y + j][ObjList[i].X + k].X = tempStrenght*sign(j);
-                grid[ObjList[i].Y + j][ObjList[i].X + k].Y = tempStrenght*sign(k);
+				grid[ObjList[i].X + j][ObjList[i].Y + k].X = tempStrenght*sign(j);
+                grid[ObjList[i].X + j][ObjList[i].Y + k].Y = tempStrenght*sign(k);
              }
 
 		}
