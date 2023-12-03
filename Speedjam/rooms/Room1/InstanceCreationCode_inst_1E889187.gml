@@ -1,1 +1,2 @@
-SpdY = 3;
+Density = 100;
+Mass = 32;
