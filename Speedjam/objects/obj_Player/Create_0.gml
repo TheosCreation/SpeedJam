@@ -1,7 +1,7 @@
 X = (x/8);
 Y = (y/8);
 Mass = 0;
-Density = 80; //determines how much gravityt affects it
+Density = 1; //determines how much gravityt affects it
 GravityHandler.ObjCount++;
 
 GravityHandler.ObjList[GravityHandler.ObjCount] = id;

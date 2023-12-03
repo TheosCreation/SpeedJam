@@ -44,7 +44,7 @@ for(var i = 0; i< array_length(ObjList);i++){
 		}
 	}
 }
-show_debug_message(Hit);
+
 
 /*
 for (var i = 0; i < array_length(ObjList); i++) {
