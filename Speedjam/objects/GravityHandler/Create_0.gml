@@ -12,3 +12,4 @@ for (var i = 0; i < GridResolution; i++) {
 	}
 }
 
+Hit = false;

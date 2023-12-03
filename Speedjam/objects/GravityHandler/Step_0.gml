@@ -15,25 +15,36 @@ for(var i = 0; i< array_length(ObjList);i++){
 
 	tempStrenght = 0;
 	for (var j = -tempMass; j < tempMass+1; j++) {
+		//show_debug_message(1+tempMass+ abs(ObjList[i].SpdY+10));
 		for (var k = -tempMass+abs(j*0.5); k < tempMass+1-abs(j*0.5); k++) {
-		if ((ObjList[i].X + j < GridResolution-(1+tempMass) &&
-            ObjList[i].X + j >= (1+tempMass) &&
-            ObjList[i].Y + k < GridResolution-(1+tempMass) &&
-            ObjList[i].Y + k >= (1+tempMass))&&j!=0||k!=0)
-			{
+		if ((ObjList[i].X + j < GridResolution-(1+tempMass+ (ObjList[i].SpdX)) &&
+            ObjList[i].X + j >= (1+tempMass+ abs(ObjList[i].SpdX)) &&
+            ObjList[i].Y + k <  GridResolution-(1+tempMass+ ObjList[i].SpdY+10) &&
+            ObjList[i].Y + k >= (1+tempMass+ abs(ObjList[i].SpdY+10)))
+			&&j!=0||k!=0)
+			{	
                 tempStrenght =abs(((abs(j) + abs(k)) / 2)-tempMass);
-				grid[ObjList[i].X + j][ObjList[i].Y + k].X += exp(tempStrenght/10)*sign(j);
-                grid[ObjList[i].X + j][ObjList[i].Y + k].Y += exp(tempStrenght/10)*sign(k);
+				grid[ObjList[i].X + j][ObjList[i].Y + k].X += exp(tempStrenght/(tempMass/5))*sign(j);
+                grid[ObjList[i].X + j][ObjList[i].Y + k].Y += exp(tempStrenght/(tempMass/5))*sign(k);
+				
+			
              }
-			 else if(j!=0||k!=0){
-				ObjList[i].SpdX*=-0.9;
-				ObjList[i].SpdY*=-0.9;
-				continue;
+			 else if((j!=0||k!=0)&&!Hit){
+				 
+				 Hit = true;
+				alarm[0] = 2;
+				ObjList[i].SpdX*=-1;
+				ObjList[i].SpdY*=-1;
+				grid[ObjList[i].X + j][ObjList[i].Y + k].X = 0;
+                grid[ObjList[i].X + j][ObjList[i].Y + k].Y = 0;
+				
 			 }
+
 
 		}
 	}
 }
+show_debug_message(Hit);
 
 /*
 for (var i = 0; i < array_length(ObjList); i++) {
