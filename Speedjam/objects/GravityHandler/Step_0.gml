@@ -20,8 +20,8 @@ for(var i = 0; i< array_length(ObjList);i++){
 		if ((ObjList[i].X + j < GridResolution-(1+tempMass+ (ObjList[i].SpdX)) &&
             ObjList[i].X + j >= (1+tempMass+ abs(ObjList[i].SpdX)) &&
             ObjList[i].Y + k <  GridResolution-(1+tempMass+ ObjList[i].SpdY+10) &&
-            ObjList[i].Y + k >= (1+tempMass+ abs(ObjList[i].SpdY+10)))
-			&&j!=0||k!=0)
+            ObjList[i].Y + k >= (1+tempMass+ abs(ObjList[i].SpdY+10))) &&
+			j!=0||k!=0)
 			{	
                 tempStrenght =abs(((abs(j) + abs(k)) / 2)-tempMass);
 				grid[ObjList[i].X + j][ObjList[i].Y + k].X += exp(tempStrenght/(tempMass/5))*sign(j);

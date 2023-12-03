@@ -3,11 +3,13 @@
   "resourceVersion": "1.6",
   "name": "Speedjam",
   "resources": [
+    {"id":{"name":"spr_Player","path":"sprites/spr_Player/spr_Player.yy",},"order":2,},
     {"id":{"name":"spr_Grid","path":"sprites/spr_Grid/spr_Grid.yy",},"order":0,},
     {"id":{"name":"obj_Object","path":"objects/obj_Object/obj_Object.yy",},"order":1,},
     {"id":{"name":"spr_Object","path":"sprites/spr_Object/spr_Object.yy",},"order":1,},
     {"id":{"name":"ObjCamera","path":"objects/ObjCamera/ObjCamera.yy",},"order":2,},
     {"id":{"name":"GravityHandler","path":"objects/GravityHandler/GravityHandler.yy",},"order":0,},
+    {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
