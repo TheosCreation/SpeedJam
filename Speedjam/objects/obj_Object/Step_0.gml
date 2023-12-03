@@ -2,21 +2,19 @@ x = X*8;
 y = Y*8;
 
 
-if (X + SpdX/Density < GravityHandler.GridResolution-SpdX/Density &&
-	X + SpdX/Density > abs(SpdX/Density))
-{
+
+/*if(!place_empty(x,y)){
+	show_debug_message("ddd");
+
+	SpdX = 0;
+	SpdY = 0;
+}
+else{*/
+
 	X+=SpdX/Density;
-}
-else{
-SpdX*=-1;
-}
-if (Y + SpdY/Density < GravityHandler.GridResolution-SpdY/Density &&
-	Y + SpdY/Density > abs(SpdY/Density))
-{
+
 	Y+=SpdY/Density;
 	
-}
-else{
-SpdY*=-1;
-}
 
+
+//}
