@@ -1,5 +1,5 @@
-X = (x/8);
-Y = (y/8);
+X = (x/(GravityHandler.GridResolution/20));
+Y = (y/(GravityHandler.GridResolution/20));
 Mass = 10;
 Density = Mass/20; //determines how much gravityt affects it
 GravityHandler.ObjCount++;
