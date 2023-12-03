@@ -15,25 +15,27 @@ for(var i = 0; i< array_length(ObjList);i++){
 
 	tempStrenght = 0;
 	for (var j = -tempMass; j < tempMass+1; j++) {
-		for (var k = -tempMass; k < tempMass+1; k++) {
-		if ((ObjList[i].X + j < GridResolution &&
-            ObjList[i].X + j >= 0 &&
-            ObjList[i].Y + k < GridResolution &&
-            ObjList[i].Y + k >= 0)&&j!=0||k!=0)
+		for (var k = -tempMass+abs(j*0.5); k < tempMass+1-abs(j*0.5); k++) {
+		if ((ObjList[i].X + j < GridResolution-(1+tempMass) &&
+            ObjList[i].X + j >= (1+tempMass) &&
+            ObjList[i].Y + k < GridResolution-(1+tempMass) &&
+            ObjList[i].Y + k >= (1+tempMass))&&j!=0||k!=0)
 			{
                 tempStrenght =abs(((abs(j) + abs(k)) / 2)-tempMass);
-				grid[ObjList[i].X + j][ObjList[i].Y + k].X += tempStrenght*sign(j);
-                grid[ObjList[i].X + j][ObjList[i].Y + k].Y += tempStrenght*sign(k);
+				grid[ObjList[i].X + j][ObjList[i].Y + k].X += exp(tempStrenght/10)*sign(j);
+                grid[ObjList[i].X + j][ObjList[i].Y + k].Y += exp(tempStrenght/10)*sign(k);
              }
-			 else{
-				//ObjList[i].SpdX*=-1;
-				//ObjList[i].SpdY*=-1;
+			 else if(j!=0||k!=0){
+				ObjList[i].SpdX*=-0.9;
+				ObjList[i].SpdY*=-0.9;
 				continue;
 			 }
 
 		}
 	}
-}/*
+}
+
+/*
 for (var i = 0; i < array_length(ObjList); i++) {
     tempMass = ObjList[i].Mass;
 
