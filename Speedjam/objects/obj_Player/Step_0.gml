@@ -4,7 +4,20 @@ y = Y*8;
 /*plan
 get pos of X and Y vector of current pos 
 reverse it to get pos
-*/
+*/TOTx = X+(SpdX/Density)+Mass;
+TOTy = Y+(SpdY/Density)+Mass;
+if( TOTx>5&&
+	TOTx<GravityHandler.GridResolution-5&&
+	TOTy>5&&
+	TOTy<GravityHandler.GridResolution-5){
+	
+}
+else{
+	
+	SpdX*=-1;
+	SpdY*=-1;
+}
+
 if(!place_empty(x,y)){
 	if(Jumped == false){
 		SpdX = 0;
