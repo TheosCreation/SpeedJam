@@ -2,18 +2,18 @@ x = X*8;
 y = Y*8;
 
 
-if (X + SpdX/Mass < GravityHandler.GridResolution-SpdX &&
-	X + SpdX/Mass > abs(SpdX))
+if (X + SpdX/Density < GravityHandler.GridResolution-SpdX/Density &&
+	X + SpdX/Density > abs(SpdX/Density))
 {
-	X+=SpdX/Mass;
+	X+=SpdX/Density;
 }
 else{
 SpdX*=-1;
 }
-if (Y + SpdY/Mass < GravityHandler.GridResolution-SpdY &&
-	Y + SpdY/Mass > abs(SpdY))
+if (Y + SpdY/Density < GravityHandler.GridResolution-SpdY/Density &&
+	Y + SpdY/Density > abs(SpdY/Density))
 {
-	Y+=SpdY/Mass;
+	Y+=SpdY/Density;
 	
 }
 else{
