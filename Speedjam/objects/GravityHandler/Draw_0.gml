@@ -1,4 +1,4 @@
-/*for (var i = 0; i < GridResolution; i++) {
+for (var i = 0; i < GridResolution; i++) {
     for (var j = 0; j < GridResolution; j++) {
 		//draw_set_color(make_color_rgb(1,grid[i][j].X*100,grid[i][j].Y*100))
 		//draw_set_color(c_aqua)
@@ -12,7 +12,7 @@
 		//draw_text(i*8+6,j*8,grid[i][j].Y);
 		
 	}
-}*/
+}
 /*
 for(var i = 0; i< array_length(ObjList);i++){
 	draw_sprite(spr_Object,0,ObjList[i].X*64+16,ObjList[i].Y*64+16);
