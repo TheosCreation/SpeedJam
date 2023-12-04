@@ -57,3 +57,11 @@ else{
 }
 
 //show_debug_message(Jumped);
+if(mouse_check_button_pressed(mb_left) && CanShoot) {
+	CanShoot = false;
+	alarm[0] = 50;
+	instance_create_layer(x,y,"Instances", obj_GravHole)
+	//if(){
+	//	
+	//}
+}

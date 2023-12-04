@@ -3,8 +3,8 @@ Y = (y/(GravityHandler.GridResolution/20));
 Mass = 10;
 Density = Mass/20; //determines how much gravityt affects it
 GravityHandler.ObjCount++;
-
-GravityHandler.ObjList[GravityHandler.ObjCount] = id;
+ObjArrayNumber = GravityHandler.ObjCount;
+GravityHandler.ObjList[ObjArrayNumber] = id;
 OldGrid = {
 			X:0,
 			Y:0

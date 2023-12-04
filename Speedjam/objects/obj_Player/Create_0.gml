@@ -12,3 +12,4 @@ OldGrid = {
 SpdX = 0.0;
 SpdY = 0.0;
 Jumped = false;
+CanShoot = true;
